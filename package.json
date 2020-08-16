@@ -1,5 +1,5 @@
 {
-  "homepage":"http://2kartheek10.github.io/Restaurant_React",
+  "homepage": "http://2kartheek10.github.io/Restaurant_React",
   "name": "confusion",
   "version": "0.1.0",
   "private": true,
@@ -28,13 +28,12 @@
     "redux-thunk": "2.2.0"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
   },
   "eslintConfig": {
     "extends": "react-app"
