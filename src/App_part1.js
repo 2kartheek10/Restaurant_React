@@ -4,12 +4,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
-import Main from './components/MainComponent';
-import { DISHES } from './shared/dishes';
-import { BrowserRouter } from 'react-router-dom';
-import { ConfigureStore } from './redux/configureStore';
-import { Provider } from 'react-redux';
-
+import Menu from './components/MenuComponent';
+// import { DISHES } from './shared/dishes';
 
 
 
@@ -19,25 +15,22 @@ import { Provider } from 'react-redux';
   class App extends Component {
     constructor(props) {
       super(props);
-      this.state = {
-        dishes: DISHES
-      };
-      
-
+    //   this.state = {
+    //     dishes: DISHES
+    //   };
     }
   render() {
-    const store = ConfigureStore();
     return (
-      <Provider store={store}>
-      <BrowserRouter>
       <div className="App">
-        
-        <Main></Main>
-       
+        <Navbar dark color="primary">
+          <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+          </div>
+          
+        </Navbar>
+        <Menu />
 
       </div>
-      </BrowserRouter>
-      </Provider>
     );
   }
 }
